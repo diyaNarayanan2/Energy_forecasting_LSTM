@@ -2,7 +2,7 @@
 
 Energy forecasting model that uses renewable energy data from 6 years to forecast and predict. 
 Uses Long Short term Memory Neural Network model
-Impleneted using Pytorch
+Impleneted using Pytorch and tuned using Keras.
 
 ## Base Model
 The base model we use to evaluate and understand the different post-processing techniques is an LSTM-RNN, which stands for Long Short Term Memory Recurrent Neural Network. It is commonly employed in renewable energy forecasting, as the field requires data to be considered from not just recent occurrences but also past occurrences. 
@@ -16,7 +16,9 @@ Our training data consists of 10 years of hourly measured Solar energy data, inc
 
 ## HyperParameter Tuning
 The model was further run on a hyperparameter tuning algorithm. This was done by creating a function which used the input sequences and grid space of possible variations of the model as input variables. 
-The hyperparameter tuning algorithm worked upon the base model and used an array of configurations which represented the grid of the search space. This algorithm first calculates the possible combinations of model structure and runs a training algorithm on each of these models. Further, the model also maintains a count of which of these models has the best loss functions at the end of training by using a validation dataset as reference for calculating this. Finally the best model is saved to a particular locally available file, which is used to plot the final output and scatterplot
+The hyperparameter tuning algorithm worked upon the base model and used an array of configurations which represented the grid of the search space. This algorithm first calculates the possible combinations of model structure and runs a training algorithm on each of these models. 
+
+Further, the model also maintains a count of which of these models has the best loss functions at the end of training by using a validation dataset as reference for calculating this. Finally the best model is saved to a particular locally available file, which is used to plot the final output and scatterplot.
 
 
 
