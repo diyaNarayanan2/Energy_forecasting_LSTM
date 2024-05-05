@@ -14,4 +14,10 @@ The LSTM file shows the initial version of the model used for preliminary result
 
 Our training data consists of 10 years of hourly measured Solar energy data, including the Global horizontal irradiance (GHI) and 2m Temperature, which records the temperature just 2m above the sensor. 
 
+## HyperParameter Tuning
+The model was further run on a hyperparameter tuning algorithm. This was done by creating a function which used the input sequences and grid space of possible variations of the model as input variables. 
+The hyperparameter tuning algorithm worked upon the base model and used an array of configurations which represented the grid of the search space. This algorithm first calculates the possible combinations of model structure and runs a training algorithm on each of these models. Further, the model also maintains a count of which of these models has the best loss functions at the end of training by using a validation dataset as reference for calculating this. Finally the best model is saved to a particular locally available file, which is used to plot the final output and scatterplot
+
+
+
 
